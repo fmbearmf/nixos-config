@@ -3,7 +3,7 @@
 {
 	zramSwap = {
 		enable = true;
-		memoryPercent = 50;
+		memoryPercent = 100;
 		priority = 100;
 	};
 }
