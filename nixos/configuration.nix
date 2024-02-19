@@ -12,6 +12,7 @@
       ./zram.nix
       ./wm.nix
       ./packages.nix
+      ./dns.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -81,6 +82,13 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  programs.fish.enable = true;
+  users.defaultUserShell = pkgs.fish;
+
+  programs.fish.promptInit = ''
+  	${pkgs.any-nix-shell}/bin/any-nix-shell fish --info-right | source
+  '';
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.bear = {
     isNormalUser = true;
@@ -88,12 +96,12 @@
     packages = with pkgs; [
       tree
     ];
+    shell = pkgs.fish;
   };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim
     wget
 	btrfs-progs		
 	moreutils
@@ -112,13 +120,19 @@
 	nix-index
 	direnv
 	git
-	zsh
 	jq
 	ripgrep
 	fd
 
 	mesa
   ];
+
+  programs.neovim = {
+	enable = true;
+	defaultEditor = true;
+	viAlias = true;
+	vimAlias = true;
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
