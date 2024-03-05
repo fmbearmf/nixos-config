@@ -31,6 +31,9 @@
 		audacity
 		fluent-reader
 		qbittorrent
+		gnumake
+		pandoc
+		sass
 	];
 
 	environment.systemPackages = with pkgs; [
@@ -43,8 +46,6 @@
 		llvmPackages_17.clang
 		openjdk19
 		steam-run
-		blender-hip
-		blender
 		python311
 		python311Packages.pip
 		(python311.withPackages (ps: with ps; [ pip ]))
@@ -70,6 +71,8 @@
 		gst_all_1.gst-plugins-good
 		gst_all_1.gst-plugins-ugly
 		gst_all_1.gst-vaapi
+		libvorbis
+		mlocate
 	];
 	fonts.packages = with pkgs; [
 		noto-fonts
