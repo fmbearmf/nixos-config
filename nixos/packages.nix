@@ -11,10 +11,11 @@
 		vesktop
 		yt-dlp
 		gimp
-		cider
 		prismlauncher
 		corepack
 		nodejs_21
+		nodePackages.webpack
+		nodePackages.webpack-cli
 		vscode
 		neofetch
 		fastfetch
@@ -34,6 +35,14 @@
 		gnumake
 		pandoc
 		sass
+		socat
+		cider
+		mangohud
+		mpv
+		mc
+		lazygit
+		broot
+
 	];
 
 	environment.systemPackages = with pkgs; [

@@ -21,7 +21,7 @@
 	"video=DP-1:2560x1440@165"
 	"video=HDMI-A-1:1920x1200@60"
   ];
-  boot.kernel.sysctl = { "vm.swappiness" = 100; };
+  boot.kernel.sysctl = { "vm.swappiness" = 200; };
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/c50920a7-7aab-45f3-b124-49f6cbde2998";

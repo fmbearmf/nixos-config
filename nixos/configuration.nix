@@ -13,6 +13,8 @@
       ./wm.nix
       ./packages.nix
       ./dns.nix
+      ./lutris.nix
+      ./virt.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
