@@ -42,7 +42,7 @@
 		mc
 		lazygit
 		broot
-
+		tetrio-desktop
 	];
 
 	environment.systemPackages = with pkgs; [
