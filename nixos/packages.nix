@@ -43,6 +43,7 @@
 		lazygit
 		broot
 		tetrio-desktop
+		blender-hip
 	];
 
 	environment.systemPackages = with pkgs; [
