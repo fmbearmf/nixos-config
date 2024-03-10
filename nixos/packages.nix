@@ -61,8 +61,7 @@
 		(python311.withPackages (ps: with ps; [ pip ]))
 		go
 		unzip
-		cargo
-		rustc
+		(pkgs.latest.rustChannels.nightly.rust.override { extensions = [ "rust-src" "rustfmt" "clippy" ]; })
 		php
 		phpPackages.composer
 		luarocks
