@@ -1,6 +1,10 @@
 { config, lib, pkgs, ... }:
 
 {
+	nixpkgs.overlays = [
+    		(import "${fetchTarball "https://github.com/nix-community/fenix/archive/main.tar.gz"}/overlay.nix") 
+	];
+
 	nixpkgs.config.allowUnfree = true;
 	users.users.bear.packages = with pkgs; [
 		htop
@@ -61,7 +65,14 @@
 		(python311.withPackages (ps: with ps; [ pip ]))
 		go
 		unzip
-		(pkgs.latest.rustChannels.nightly.rust.override { extensions = [ "rust-src" "rustfmt" "clippy" ]; })
+		(fenix.complete.withComponents [
+      			"cargo"
+      			"clippy"
+      			"rust-src"
+      			"rustc"
+      			"rustfmt"
+    		])
+    		rust-analyzer-nightly
 		php
 		phpPackages.composer
 		luarocks
