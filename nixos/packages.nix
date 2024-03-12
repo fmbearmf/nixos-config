@@ -48,6 +48,7 @@
 		broot
 		tetrio-desktop
 		blender-hip
+		ryujinx
 	];
 
 	environment.systemPackages = with pkgs; [
