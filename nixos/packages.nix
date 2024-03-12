@@ -93,6 +93,8 @@
 		gst_all_1.gst-vaapi
 		libvorbis
 		mlocate
+		openal
+		SDL2
 	];
 	fonts.packages = with pkgs; [
 		noto-fonts
