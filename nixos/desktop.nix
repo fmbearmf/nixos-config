@@ -1,14 +1,13 @@
 { config, lib, pkgs, ... }:
 
 {
-	desktopItems = [
-		(makeDesktopItem {
+	environment.systemPackages = [
+		(pkgs.makeDesktopItem {
 			name = "ryujinx";
-			exec = "ryujinx";
 			desktopName = "Ryujinx";
-			categories = [ "Emulators" ];
-			comment = "Switch emulator.";
-			icon = "ryujinx";
+			exec = "ryujinx";
+			terminal = false;
 		})
 	];
+
 }

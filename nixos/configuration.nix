@@ -15,6 +15,7 @@
       ./dns.nix
       ./lutris.nix
       ./virt.nix
+      ./desktop.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
