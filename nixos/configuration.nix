@@ -103,6 +103,7 @@
     ];
     shell = pkgs.fish;
   };
+  users.extraGroups.vboxusers.members = [ "bear" ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
