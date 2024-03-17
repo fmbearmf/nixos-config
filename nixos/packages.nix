@@ -99,7 +99,7 @@
 		libvorbis
 		mlocate
 		openal
-		glfw
+		glfw-wayland
 	];
 	fonts.packages = with pkgs; [
 		noto-fonts
