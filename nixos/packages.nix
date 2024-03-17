@@ -53,6 +53,7 @@
 		tetrio-desktop
 		blender-hip
 		ryujinx
+		pcem
 	];
 
 	environment.systemPackages = with pkgs; [
