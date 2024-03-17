@@ -8,6 +8,12 @@
 			exec = "ryujinx";
 			terminal = false;
 		})
+		(pkgs.makeDesktopItem {
+			name = "pcem";
+			desktopName = "PCem";
+			exec = "pcem";
+			terminal = false;
+		})
 	];
 
 }
