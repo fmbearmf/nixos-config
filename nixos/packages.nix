@@ -53,6 +53,7 @@
 		blender-hip
 		ryujinx
 		pcem
+		unigine-superposition
 	];
 
 	environment.systemPackages = with pkgs; [
