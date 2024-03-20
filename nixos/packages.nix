@@ -53,7 +53,7 @@
 		blender-hip
 		ryujinx
 		pcem
-		unigine-superposition
+		geekbench
 	];
 
 	environment.systemPackages = with pkgs; [
