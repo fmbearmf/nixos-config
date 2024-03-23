@@ -54,6 +54,7 @@
 		ryujinx
 		pcem
 		geekbench
+		imagemagick
 	];
 
 	environment.systemPackages = with pkgs; [
