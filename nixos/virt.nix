@@ -14,7 +14,7 @@
 	};
 
 	programs.virt-manager.enable = true;
-	users.users.bear.extraGroups = [ "libvirtd" ];
+	users.users.bear.extraGroups = [ "libvirtd" "qemu-libvirtd" ];
 
 	environment.etc = {
 		"ovmf/edk2-x86_64-secure-code.fd" = {
