@@ -1,27 +1,31 @@
 { config, lib, pkgs, ... }:
 
 {
-	virtualisation.libvirtd = {
-		enable = true;
+	environment.systemPackages = with pkgs; [
+		virt-viewer
+		spice
+		spice-gtk
+		spice-protocol
+		win-virtio
+		win-spice
+		gnome.adwaita-icon-theme
+	];
 
-		qemu = {
-			package = pkgs.qemu_kvm;
-			ovmf.enable = true;
-			ovmf.packages = [ pkgs.OVMFFull.fd ];
-			swtpm.enable = true;
-			runAsRoot = false;
+	virtualisation = {
+		libvirtd = {
+			enable = true;
+			qemu = {
+				swtpm.enable = true;
+				ovmf.enable = true;
+				ovmf.packages = [ pkgs.OVMFFull.fd ];
+			};
 		};
+		spiceUSBRedirection.enable = true;
 	};
+	services.spice-vdagentd.enable = true;
 
 	programs.virt-manager.enable = true;
 	users.users.bear.extraGroups = [ "libvirtd" "qemu-libvirtd" ];
 
-	environment.etc = {
-		"ovmf/edk2-x86_64-secure-code.fd" = {
-			source = config.virtualisation.libvirtd.qemu.package + "/share/qemu/edk2-x86_64-secure-code.fd";
-		};
-		"ovmf/edk2-i386-vars.fd" = {
-    			source = config.virtualisation.libvirtd.qemu.package + "/share/qemu/edk2-i386-vars.fd";
-  		};
-	};
+	programs.dconf.enable = true;
 }
