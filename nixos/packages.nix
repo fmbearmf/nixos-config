@@ -56,6 +56,7 @@
 		geekbench
 		imagemagick
 		fbset
+		freeglut
 	];
 
 	environment.systemPackages = with pkgs; [
