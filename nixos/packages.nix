@@ -55,6 +55,7 @@
 		pcem
 		geekbench
 		imagemagick
+		fbset
 	];
 
 	environment.systemPackages = with pkgs; [
