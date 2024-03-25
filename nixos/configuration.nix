@@ -94,14 +94,14 @@
 		p_0 = {
 			enable = true;
 			type = "socks5";
-			host = "192.111.139.162";
+			host = "174.75.211.222";
 			port = 4145;
 		};
 		p_1 = {
 			enable = true;
 			type = "socks5";
-			host = "194.163.137.106";
-			port = 9050;
+			host = "72.195.34.60";
+			port = 27391;
 		};
 	};
   };
