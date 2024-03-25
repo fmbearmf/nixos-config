@@ -91,12 +91,12 @@
 		type = "strict";
 	};
 	proxies = {
-		p_0 = {
-			enable = true;
-			type = "socks5";
-			host = "167.71.220.29";
-			port = 7497;
-		};
+		#p_0 = {
+		#	enable = true;
+		#	type = "socks5";
+		#	host = "167.71.220.29";
+		#	port = 7497;
+		#};
 		p_1 = {
 			enable = true;
 			type = "socks5";
