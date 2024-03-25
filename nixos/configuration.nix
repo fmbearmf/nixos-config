@@ -86,7 +86,6 @@
 
   programs.proxychains = {
 	enable = true;
-	package = pkgs.proxychains-ng;
 	chain = {
 		type = "strict";
 	};
