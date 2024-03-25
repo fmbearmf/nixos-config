@@ -86,8 +86,9 @@
 
   programs.proxychains = {
 	enable = true;
+	proxyDNS = false;
 	chain = {
-		type = "strict";
+		type = "dynamic";
 	};
 	proxies = {
 		p_0 = {
