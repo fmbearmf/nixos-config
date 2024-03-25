@@ -84,6 +84,18 @@
 	};
   };
 
+  programs.proxychains = {
+	enable = true;
+	proxies = {
+		p_0 = {
+			enable = true;
+			type = "socks5";
+			host = "167.71.220.29";
+			port = 7497;
+		};
+	};
+  };
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
