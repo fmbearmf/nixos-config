@@ -86,6 +86,7 @@
 
   programs.proxychains = {
 	enable = true;
+	package = pkgs.proxychains-ng;
 	proxies = {
 		p_0 = {
 			enable = true;
