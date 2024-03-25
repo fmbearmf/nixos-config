@@ -88,7 +88,7 @@
 	enable = true;
 	proxyDNS = false;
 	chain = {
-		type = "dynamic";
+		type = "strict";
 	};
 	proxies = {
 		p_0 = {
