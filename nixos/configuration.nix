@@ -87,12 +87,51 @@
   programs.proxychains = {
 	enable = true;
 	package = pkgs.proxychains-ng;
+	chain = {
+		type = "strict";
+	};
 	proxies = {
 		p_0 = {
 			enable = true;
 			type = "socks5";
 			host = "167.71.220.29";
 			port = 7497;
+		};
+		p_1 = {
+			enable = true;
+			type = "socks5";
+			host = "202.6.233.59";
+			port = 7878;
+		};
+		p_2 = {
+			enable = true;
+			type = "socks5";
+			host = "103.174.178.249";
+			port = 2015;
+		};
+		p_3 = {
+			enable = true;
+			type = "socks5";
+			host = "103.146.197.43";
+			port = 4996;
+		};
+		p_4 = {
+			enable = true;
+			type = "socks5";
+			host = "103.174.178.133";
+			port = 1020;
+		};
+		p_5 = {
+			enable = true;
+			type = "socks5";
+			host = "132.226.7.23";
+			port = 30277;
+		};
+		p_6 = {
+			enable = true;
+			type = "socks5";
+			host = "129.154.59.13";
+			port = 43238;
 		};
 	};
   };
