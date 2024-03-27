@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 let
-  module = "quantum"; # Change to configuration module name
+  module = "quantum"; # Config module name
 in
 {
   imports = 

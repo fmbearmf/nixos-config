@@ -12,6 +12,7 @@
       ./virt.nix
       ./desktop.nix
       ./packages.nix
+	  ./docker.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
