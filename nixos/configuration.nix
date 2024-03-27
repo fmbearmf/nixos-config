@@ -1,8 +1,11 @@
 { config, lib, pkgs, ... }:
 
+let
+  module = "quantum"; # Change to configuration module name
+in
 {
   imports = 
     [
-      ./modules/quantum.nix
+      ./modules/${module}/module.nix
     ];
 }
