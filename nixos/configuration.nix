@@ -3,7 +3,6 @@
 {
   imports = 
     [
-      ./packages.nix # Change contents
-      ./quantum/quantum-configuration.nix # Change this
+      ./modules/quantum.nix
     ];
 }

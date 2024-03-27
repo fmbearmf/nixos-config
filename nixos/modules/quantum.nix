@@ -3,14 +3,15 @@
 {
   imports =
     [
-      ./hardware.nix
-      ./sudo.nix
-      ./zram.nix
-      ./wm.nix
-      ./dns.nix
-      ./lutris.nix
-      ./virt.nix
-      ./desktop.nix
+      ./quantum/hardware.nix
+      ./quantum/sudo.nix
+      ./quantum/zram.nix
+      ./quantum/wm.nix
+      ./quantum/dns.nix
+      ./quantum/lutris.nix
+      ./quantum/virt.nix
+      ./quantum/desktop.nix
+      ./quantum/packages.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
