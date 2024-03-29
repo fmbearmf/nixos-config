@@ -62,7 +62,7 @@
 	environment.systemPackages = with pkgs; [
 		xdg-desktop-portal
 		xdg-desktop-portal-gnome
-		ffmpeg
+		ffmpeg-full
 		libstdcxx5
 		gcc
 		zig
