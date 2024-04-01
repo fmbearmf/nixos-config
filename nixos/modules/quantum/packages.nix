@@ -57,6 +57,7 @@
 		imagemagick
 		fbset
 		freeglut
+		protonup-qt
 	];
 
 	environment.systemPackages = with pkgs; [
