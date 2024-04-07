@@ -57,6 +57,7 @@
 		freeglut
 		protonup-qt
 		nil
+		nixpkgs-fmt
 	];
 
 	environment.systemPackages = with pkgs; [
