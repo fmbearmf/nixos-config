@@ -58,6 +58,7 @@
 		fbset
 		freeglut
 		protonup-qt
+		nil
 	];
 
 	environment.systemPackages = with pkgs; [
