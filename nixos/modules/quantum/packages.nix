@@ -71,8 +71,7 @@
 		openjdk19
 		steam-run
 		python311
-		python311Packages.pip
-		(python311.withPackages (ps: with ps; [ pip ]))
+		python311Packages.aiohttp
 		go
 		unzip
 		(fenix.complete.withComponents [
