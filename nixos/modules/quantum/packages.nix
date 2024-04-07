@@ -48,7 +48,7 @@
 		lazygit
 		broot
 		tetrio-desktop
-		blender-hip
+		(blender-hip.withPackages( p: [ python311Packages.aiohttp ] ))
 		ryujinx
 		pcem
 		geekbench
