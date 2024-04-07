@@ -71,9 +71,7 @@
 		openjdk19
 		steam-run
 		python311
-		(python311.withPackages (ppkgs: [
-			ppkgs.aiohttp
-		]))
+		(python311.withPackages(ps: with ps; [ pandas requests aiohttp ]))
 		go
 		unzip
 		(fenix.complete.withComponents [
