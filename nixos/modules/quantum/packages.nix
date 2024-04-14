@@ -58,7 +58,7 @@
 		protonup-qt
 		nil
 		nixpkgs-fmt
-		insomnia
+		protontricks
 	];
 
 	environment.systemPackages = with pkgs; [
