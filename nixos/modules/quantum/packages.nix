@@ -59,6 +59,7 @@
 		nil
 		nixpkgs-fmt
 		protontricks
+		xautoclick
 	];
 
 	environment.systemPackages = with pkgs; [
