@@ -108,6 +108,7 @@
 		glfw-wayland
 		yad
 		xorg.xwininfo
+		unixtools.xxd
 	];
 	fonts.packages = with pkgs; [
 		noto-fonts
