@@ -106,6 +106,8 @@
 		mlocate
 		openal
 		glfw-wayland
+		yad
+		xorg.xwininfo
 	];
 	fonts.packages = with pkgs; [
 		noto-fonts
