@@ -109,6 +109,7 @@
 		yad
 		xorg.xwininfo
 		unixtools.xxd
+		xdotool
 	];
 	fonts.packages = with pkgs; [
 		noto-fonts
