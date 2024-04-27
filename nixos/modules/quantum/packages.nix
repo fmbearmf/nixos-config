@@ -18,7 +18,7 @@
 		gimp
 		prismlauncher
 		corepack
-		nodejs_21
+		nodejs
 		nodePackages.webpack
 		nodePackages.webpack-cli
 		vscode
