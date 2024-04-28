@@ -13,7 +13,6 @@
 		firefox-devedition-bin
 		fira-mono
 		fira
-		vesktop
 		yt-dlp
 		gimp
 		prismlauncher
