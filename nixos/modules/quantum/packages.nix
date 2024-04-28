@@ -8,6 +8,7 @@
 	nixpkgs.config.allowUnfree = true;
 
 	users.users.bear.packages = with pkgs; [
+		vesktop
 		htop
 		alacritty
 		firefox-devedition-bin
