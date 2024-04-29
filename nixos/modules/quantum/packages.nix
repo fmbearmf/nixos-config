@@ -7,6 +7,8 @@
 
 	nixpkgs.config.allowUnfree = true;
 
+	services.udev.packages = [ pkgs.via ];
+
 	users.users.bear.packages = with pkgs; [
 		via
 		vesktop
