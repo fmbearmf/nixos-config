@@ -60,6 +60,7 @@
 			pkgs.tofi
 			pkgs.networkmanagerapplet
 			pkgs.xfce.thunar
+			pkgs.font-awesome
 		];	
 
 		xdg.portal = {
