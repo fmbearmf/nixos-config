@@ -119,6 +119,7 @@
 		noto-fonts-cjk
 		noto-fonts-emoji
 		iosevka
+		font-awesome
 	];
 
 	programs = {
