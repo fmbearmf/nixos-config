@@ -62,6 +62,8 @@
 			pkgs.xfce.thunar
 			pkgs.grim
 			pkgs.slurp
+			pkgs.gnome.file-roller
+			pkgs.nwg-look
 		];	
 
 		xdg.portal = {
