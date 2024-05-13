@@ -1,11 +1,19 @@
 { config, lib, pkgs, ... }:
 
 {	
-	# GNOME
 		services.xserver = {
 				enable = true;
-				displayManager.gdm.enable = true;
+#				displayManager.gdm.enable = true;
 #				desktopManager.gnome.enable = true;
+#				displayManager.sddm = {
+#					enable = true;
+#					wayland.enable = true;
+#				};
+		};
+
+		services.displayManager = {
+			sddm.enable = true;
+			sddm.wayland.enable = true;
 		};
 #		
 #		environment.gnome.excludePackages = (with pkgs; [
@@ -62,4 +70,6 @@
 				};
 			};
 		};
+
+
 }
