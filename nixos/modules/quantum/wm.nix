@@ -58,6 +58,7 @@
 			pkgs.libnotify
 			pkgs.swww	
 			pkgs.tofi
+			pkgs.networkmanagerapplet
 		];	
 
 		xdg.portal = {
