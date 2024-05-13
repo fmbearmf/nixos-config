@@ -121,6 +121,7 @@
 		iosevka
 		font-awesome
 		material-icons
+		nerdfonts
 	];
 
 	programs = {
