@@ -13,6 +13,7 @@
       ./desktop.nix
       ./packages.nix
 	  ./docker.nix
+	  ./flatpak.nix
     ];
 
   boot.loader.systemd-boot.enable = true;

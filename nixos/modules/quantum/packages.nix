@@ -10,6 +10,7 @@
 	services.udev.packages = [ pkgs.via ];
 
 	users.users.bear.packages = with pkgs; [
+		gnome.gnome-software
 		via
 		vesktop
 		htop
@@ -44,7 +45,6 @@
 		pandoc
 		sass
 		socat
-		cider
 		mangohud
 		mpv
 		mc
