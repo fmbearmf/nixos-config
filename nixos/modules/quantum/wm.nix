@@ -64,6 +64,8 @@
 			pkgs.slurp
 			pkgs.gnome.file-roller
 			pkgs.nwg-look
+			pkgs.libsForQt5.breeze-qt5
+			pkgs.libsForQt5.breeze-gtk
 		];	
 
 		xdg.portal = {
