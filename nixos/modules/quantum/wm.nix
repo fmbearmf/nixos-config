@@ -60,6 +60,8 @@
 			pkgs.tofi
 			pkgs.networkmanagerapplet
 			pkgs.xfce.thunar
+			pkgs.grim
+			pkgs.slurp
 		];	
 
 		xdg.portal = {
