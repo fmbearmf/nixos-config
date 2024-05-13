@@ -120,6 +120,7 @@
 		noto-fonts-emoji
 		iosevka
 		font-awesome
+		material-icons
 	];
 
 	programs = {
