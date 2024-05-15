@@ -9,6 +9,7 @@
 #					enable = true;
 #					wayland.enable = true;
 #				};
+				desktopManager.plasma5.enable = true;
 		};
 
 		services.displayManager = {
@@ -16,13 +17,13 @@
 			sddm.wayland.enable = true;
 		};
 
-		services.desktopManager = {
-			plasma6.enable = true;
-		};
-
-		environment.plasma6.excludePackages = with pkgs.kdePackages; [
-			konsole
-		];
+#		services.desktopManager = {
+#			plasma6.enable = true;
+#		};
+#
+#		environment.plasma6.excludePackages = with pkgs.kdePackages; [
+#			konsole
+#		];
 #		
 #		environment.gnome.excludePackages = (with pkgs; [
 #			gnome-photos
