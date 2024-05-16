@@ -10,6 +10,7 @@
 	services.udev.packages = [ pkgs.via ];
 
 	users.users.bear.packages = with pkgs; [
+		libunwind
 		cmake
 		gnome.gnome-software
 		via

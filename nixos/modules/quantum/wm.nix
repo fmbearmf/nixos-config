@@ -9,17 +9,19 @@
 #					enable = true;
 #					wayland.enable = true;
 #				};
-				desktopManager.plasma5.enable = true;
+#				desktopManager.plasma5.enable = true;
 		};
 
-		services.displayManager = {
-			sddm.enable = true;
-			sddm.wayland.enable = true;
+		services.displayManager.sddm = {
+			enable = true;
+			wayland = {
+				enable = true;
+			};
 		};
 
-#		services.desktopManager = {
-#			plasma6.enable = true;
-#		};
+		services.desktopManager = {
+			plasma6.enable = true;
+		};
 #
 #		environment.plasma6.excludePackages = with pkgs.kdePackages; [
 #			konsole
@@ -89,11 +91,11 @@
 #			};
 #		};
 
-		qt = {
-			enable = true;
-			platformTheme = "gnome";
-			style = "adwaita-dark";
-		};
+#		qt = {
+#			enable = true;
+#			platformTheme = "gnome";
+#			style = "adwaita-dark";
+#		};
 
 		programs.dconf.enable = true;
 
