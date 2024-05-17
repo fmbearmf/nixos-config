@@ -10,7 +10,6 @@
 	services.udev.packages = [ pkgs.via ];
 
 	users.users.bear.packages = with pkgs; [
-		insomnia
 		libunwind
 		cmake
 		gnome.gnome-software
