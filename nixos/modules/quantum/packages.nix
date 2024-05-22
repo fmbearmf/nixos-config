@@ -10,7 +10,6 @@
 	services.udev.packages = [ pkgs.via ];
 
 	users.users.bear.packages = with pkgs; [
-		unigine-superposition
 		insomnia
 		libunwind
 		cmake
