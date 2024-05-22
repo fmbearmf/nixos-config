@@ -15,7 +15,6 @@
 		cmake
 		gnome.gnome-software
 		via
-		vesktop
 		htop
 		alacritty
 		firefox-devedition-bin
