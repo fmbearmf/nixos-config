@@ -5,7 +5,7 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "sd_mod" "zstd" "btrfs" "amdgpu" ];
   boot.initrd.kernelModules = [ "zstd" "btrfs" "amdgpu" ];
@@ -14,6 +14,8 @@
   boot.kernelParams = [
     "video=DP-1:2560x1440@165"
     "video=HDMI-A-1:1920x1200@60"
+	"quiet"
+	"splash"
   ];
   boot.kernel.sysctl = { "vm.swappiness" = 200; };
 
