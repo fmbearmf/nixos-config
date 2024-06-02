@@ -10,6 +10,7 @@
 	services.udev.packages = [ pkgs.via ];
 
 	users.users.bear.packages = with pkgs; [
+		mprime
 		insomnia
 		libunwind
 		cmake
@@ -75,7 +76,7 @@
 		gcc
 		zig
 		llvmPackages_17.clang
-		openjdk19
+		openjdk21
 		steam-run
 		python311
 		(python311.withPackages(ps: with ps; [ pandas requests aiohttp ]))
