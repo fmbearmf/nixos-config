@@ -10,7 +10,7 @@
 	services.udev.packages = [ pkgs.via ];
 
 	users.users.bear.packages = with pkgs; [
-		dotnet-sdk_8	
+		dotnetCorePackages.sdk_9_0	
 		mprime
 		insomnia
 		libunwind
