@@ -1,6 +1,8 @@
 { config, lib, pkgs, ... }:
 
-{	
+let
+  tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
+in {	
 		services.xserver = {
 				enable = true;
 		};
@@ -13,7 +15,7 @@
 			enable = true;
 			settings = {
 				default_session = {
-					command = "${pkgs.greetd.greetd}/bin/agreety --cmd wayfire";
+					command = "${tuigreet} --time --remember --remember-session --cmd wayfire";
 					user = "bear";
 				};
 			};
