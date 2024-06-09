@@ -13,6 +13,8 @@ in {
 			libsForQt5.breeze-qt5
 			libsForQt5.breeze-gtk
 			waybar
+			pavucontrol
+			nwg-launchers
 		];
 
 		services.greetd = {
