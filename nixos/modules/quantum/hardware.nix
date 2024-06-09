@@ -16,6 +16,7 @@
     "video=HDMI-A-1:1920x1200@60"
 	"quiet"
 	"splash"
+	"amdgpu.dc=0"
   ];
   boot.kernel.sysctl = { "vm.swappiness" = 200; };
 
