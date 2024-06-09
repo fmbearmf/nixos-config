@@ -5,9 +5,9 @@
 				enable = true;
 		};
 
-		#environment.systemPackages = with pkgs; [
-		#	wayfire-with-plugins
-		#];
+		environment.systemPackages = with pkgs; [
+			wayfire-with-plugins
+		];
 
 		#services.greetd = {
 		#	enable = true;
