@@ -10,6 +10,7 @@
 	services.udev.packages = [ pkgs.via ];
 
 	users.users.bear.packages = with pkgs; [
+		openvpn3
 		dotnetCorePackages.sdk_9_0	
 		mprime
 		insomnia
