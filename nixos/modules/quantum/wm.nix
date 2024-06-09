@@ -21,6 +21,12 @@ in {
 			};
 		};
 
+		services.seatd = {
+			enable = true;
+			group = "users";
+			user = "bear";
+		};
+
 		#services.displayManager.sddm = {
 		#	enable = true;
 		#	wayland = {
