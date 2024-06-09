@@ -9,26 +9,26 @@
 			wayfire-with-plugins
 		];
 
-		#services.greetd = {
-		#	enable = true;
-		#	settings = {
-		#		default_session = {
-		#			command = "${pkgs.greetd.greetd}/bin/agreety --cmd wayfire";
-		#			user = "bear";
-		#		};
-		#	};
-		#};
-
-		services.displayManager.sddm = {
+		services.greetd = {
 			enable = true;
-			wayland = {
-				enable = true;
+			settings = {
+				default_session = {
+					command = "${pkgs.greetd.greetd}/bin/agreety --cmd wayfire";
+					user = "bear";
+				};
 			};
 		};
 
-		services.desktopManager = {
-			plasma6.enable = true;
-		};
+		#services.displayManager.sddm = {
+		#	enable = true;
+		#	wayland = {
+		#		enable = true;
+		#	};
+		#};
+
+		#services.desktopManager = {
+		#	plasma6.enable = true;
+		#};
 
 		environment.plasma6.excludePackages = with pkgs.kdePackages; [
 			konsole
