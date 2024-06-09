@@ -9,6 +9,10 @@ in {
 
 		environment.systemPackages = with pkgs; [
 			wayfire-with-plugins
+			dunst
+			libsForQt5.breeze-qt5
+			libsForQt5.breeze-gtk
+			waybar
 		];
 
 		services.greetd = {
