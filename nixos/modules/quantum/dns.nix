@@ -23,6 +23,19 @@
 		};
 	};
 
+	services.openvpn.servers = {
+		us = {
+			config = ''
+				config /home/bear/.ovpn/us.ovpn
+				push "resolv-retry infinite"
+				route-nopull
+			'';
+			autoStart = false;
+			authUserPass.password = builtins.readFile "/home/bear/.ovpn/pw";
+			authUserPass.username = builtins.readFile "/home/bear/.ovpn/unm";
+		};
+	};
+
 	systemd.services.dnscrypt-proxy2.serviceConfig = {
 		StateDirectory = "dnscrypt-proxy";
 	};
