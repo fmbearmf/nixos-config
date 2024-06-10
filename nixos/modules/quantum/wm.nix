@@ -15,6 +15,8 @@ in {
 			waybar
 			pavucontrol
 			nwg-launchers
+			grim
+			slurp
 		];
 
 		services.greetd = {
