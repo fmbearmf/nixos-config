@@ -10,6 +10,7 @@
 	services.udev.packages = [ pkgs.via ];
 
 	users.users.bear.packages = with pkgs; [
+		steamtinkerlaunch
 		openvpn
 		dotnetCorePackages.sdk_9_0	
 		mprime
