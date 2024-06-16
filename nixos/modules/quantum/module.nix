@@ -12,27 +12,25 @@
       ./virt.nix
       ./desktop.nix
       ./packages.nix
-	  ./docker.nix
-	  ./flatpak.nix
+      ./docker.nix
+      ./flatpak.nix
     ];
-
-    nix = {
-    	binaryCachePublicKeys = [
+    nix.settings = {
+    	trusted-public-keys = [
       		"nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       		"nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
     	];
-    	binaryCaches = [
+    	substituters = [
       		"https://cache.nixos.org/" 
      		"https://nix-community.cachix.org"
       		"https://nixpkgs-wayland.cachix.org"
     	];
+	experimental-features = ["nix-command" "flakes"];
   };
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.systemd-boot.memtest86.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   networking.hostName = "quantum";
   networking.networkmanager.enable = true;
@@ -42,8 +40,8 @@
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
   	packages = [ pkgs.terminus_font ];
-    font = "ter-v32n";
-    useXkbConfig = true;
+    	font = "ter-v32n";
+    	useXkbConfig = true;
    };
 
   hardware.opengl.enable = true;
@@ -138,8 +136,6 @@
   };
 
   services.openssh.enable = false;
-
-  system.copySystemConfiguration = true;
 
   # Don't touch this. It won't switch NixOS versions.
   system.stateVersion = "23.11"; # Did you read the comment?

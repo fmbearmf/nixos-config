@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 
 {
-	nixpkgs.overlays = [
-    		(import "${fetchTarball "https://github.com/nix-community/fenix/archive/main.tar.gz"}/overlay.nix") 
-	];
-
 	nixpkgs.config.allowUnfree = true;
 
 	services.udev.packages = [ pkgs.via ];
@@ -87,13 +83,6 @@
 		(python311.withPackages(ps: with ps; [ pandas requests aiohttp ]))
 		go
 		unzip
-		(fenix.complete.withComponents [
-      			"cargo"
-      			"clippy"
-      			"rust-src"
-      			"rustc"
-      			"rustfmt"
-    		])
     		rust-analyzer-nightly
 		php
 		phpPackages.composer
