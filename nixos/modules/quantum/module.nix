@@ -14,7 +14,7 @@
       ./packages.nix
       ./docker.nix
       ./flatpak.nix
-      ./nvim.nix
+      ./nvim/default.nix
     ];
     nix.settings = {
     	trusted-public-keys = [
