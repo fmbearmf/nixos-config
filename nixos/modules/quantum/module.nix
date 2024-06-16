@@ -14,6 +14,7 @@
       ./packages.nix
       ./docker.nix
       ./flatpak.nix
+      ./nvim.nix
     ];
     nix.settings = {
     	trusted-public-keys = [
@@ -121,13 +122,6 @@
 	fd
 	mesa
   ];
-
-  programs.neovim = {
-	enable = true;
-	defaultEditor = true;
-	viAlias = true;
-	vimAlias = true;
-  };
 
   programs.mtr.enable = true;
   programs.gnupg.agent = {

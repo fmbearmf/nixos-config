@@ -7,14 +7,18 @@
 			url = "github:nix-community/fenix";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		nixvim = {
+			url = "github:nix-community/nixvim";
+		};
 	};
 
-	outputs = { self, fenix, nixpkgs }: {
+	outputs = { self, nixpkgs, fenix, nixvim, ... }@inputs: {
 		packages.x86_64-linux.default = fenix.packages.x86_64-linux.minimal.toolchain;
 		nixosConfigurations.quantum = nixpkgs.lib.nixosSystem {
 			system = "x86_64-linux";
 			modules = [
 				./module.nix
+				nixvim.nixosModules.nixvim
 				({ pkgs, ... }: {
 					nixpkgs.overlays = [ fenix.overlays.default ];
 					environment.systemPackages = with pkgs; [

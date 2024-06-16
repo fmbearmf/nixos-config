@@ -6,6 +6,7 @@
 	services.udev.packages = [ pkgs.via ];
 
 	users.users.bear.packages = with pkgs; [
+		nodejs
 		(pkgs.pkgsi686Linux.gperftools)
 		steamtinkerlaunch
 		openvpn
@@ -25,9 +26,6 @@
 		gimp
 		prismlauncher
 		corepack
-		nodejs
-		nodePackages.webpack
-		nodePackages.webpack-cli
 		vscode
 		neofetch
 		fastfetch
