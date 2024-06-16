@@ -73,6 +73,7 @@
 	];
 
 	environment.systemPackages = with pkgs; [
+		pkg-config
 		xdg-desktop-portal
 		xdg-desktop-portal-gnome
 		ffmpeg-full
