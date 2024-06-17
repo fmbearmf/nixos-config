@@ -37,7 +37,7 @@
 				enable = true;
 				settings = {
 					indent = {
-						char = "│"; # "│" or "▎"
+						char = "▎"; # "│" or "▎"
 					};
 					scope = {
 						enabled = true;
