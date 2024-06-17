@@ -1,5 +1,8 @@
 { pkgs, lib, ... }: {
-	imports = [ ./bufferline.nix ];
+	imports = [ 
+		./bufferline.nix
+		./autoclose.nix
+	];
 
 	programs.nixvim = {
 		enable = true;
