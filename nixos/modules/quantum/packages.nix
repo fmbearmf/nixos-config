@@ -6,6 +6,7 @@
 	services.udev.packages = [ pkgs.via ];
 
 	users.users.bear.packages = with pkgs; [
+		vesktop # flatpak version isnt working for some reason
 		nodejs
 		(pkgs.pkgsi686Linux.gperftools)
 		steamtinkerlaunch
