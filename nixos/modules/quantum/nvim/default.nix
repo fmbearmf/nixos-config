@@ -3,6 +3,7 @@
 		./bufferline.nix
 		./autoclose.nix
 		./neotree.nix
+		./keymaps.nix
 	];
 
 	programs.nixvim = {
@@ -38,7 +39,7 @@
 				enable = true;
 				settings = {
 					indent = {
-						char = "▎"; # "│" or "▎"
+						char = "│"; # "│" or "▎"
 					};
 					scope = {
 						enabled = true;
