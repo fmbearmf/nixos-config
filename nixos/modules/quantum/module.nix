@@ -4,6 +4,7 @@
   imports =
     [
       ./hardware.nix
+      ./audacity.nix
       ./sudo.nix
       ./zram.nix
       ./wm.nix
