@@ -17,7 +17,7 @@
 		nixosConfigurations.quantum = nixpkgs.lib.nixosSystem {
 			system = "x86_64-linux";
 			modules = [
-				./module.nix
+				./modules/quantum/module.nix
 				nixvim.nixosModules.nixvim
 				({ pkgs, ... }: {
 					nixpkgs.overlays = [ fenix.overlays.default ];
