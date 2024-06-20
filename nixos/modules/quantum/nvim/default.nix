@@ -2,6 +2,7 @@
 	imports = [ 
 		./bufferline.nix
 		./autoclose.nix
+		./neotree.nix
 	];
 
 	programs.nixvim = {
