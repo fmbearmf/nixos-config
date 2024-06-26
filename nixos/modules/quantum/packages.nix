@@ -69,6 +69,7 @@
 	];
 
 	environment.systemPackages = with pkgs; [
+		vulkan-tools
 		stdenv.cc.cc.lib
 		pkg-config
 		xdg-desktop-portal
