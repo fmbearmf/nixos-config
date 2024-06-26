@@ -69,6 +69,7 @@
 	];
 
 	environment.systemPackages = with pkgs; [
+		stdenv.cc.cc.lib
 		pkg-config
 		xdg-desktop-portal
 		xdg-desktop-portal-gnome
