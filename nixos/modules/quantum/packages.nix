@@ -73,6 +73,7 @@
 	];
 
 	environment.systemPackages = with pkgs; [
+		libudev-zero
 		lld_18
 		vulkan-tools
 		stdenv.cc.cc.lib
