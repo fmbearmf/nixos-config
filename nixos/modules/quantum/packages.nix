@@ -8,6 +8,7 @@
 	chaotic.mesa-git.enable = true;
 
 	users.users.bear.packages = with pkgs; [
+		pcsx2
 		godot_4
 		bear
 		lldb_18
