@@ -6,7 +6,7 @@
 	services.udev.packages = [ pkgs.via ];
 
 	users.users.bear.packages = with pkgs; [
-		jetbrains.rust-rover
+		godot_4
 		bear
 		lldb_18
 		gdb
