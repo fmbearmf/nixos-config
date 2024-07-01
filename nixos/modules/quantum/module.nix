@@ -18,15 +18,6 @@
       ./nvim/default.nix
     ];
     nix.settings = {
-    	trusted-public-keys = [
-      		"nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-      		"nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
-    	];
-    	substituters = [
-      		"https://cache.nixos.org/" 
-     		"https://nix-community.cachix.org"
-      		"https://nixpkgs-wayland.cachix.org"
-    	];
 	experimental-features = ["nix-command" "flakes"];
   };
 
@@ -46,17 +37,17 @@
     	useXkbConfig = true;
    };
 
-  hardware.opengl.enable = true;
-  hardware.opengl.driSupport= true;
-  hardware.opengl.driSupport32Bit = true;
+  hardware.graphics.enable = true;
+  #hardware.opengl.driSupport = true;
+  #hardware.opengl.driSupport32Bit = true;
 
-  hardware.opengl = {
-	extraPackages = with pkgs; [
-		vaapiVdpau
-		libvdpau-va-gl
-		rocm-opencl-icd 
-		rocm-opencl-runtime
-	];
+  hardware.graphics = {
+    extraPackages = with pkgs; [
+      vaapiVdpau
+      libvdpau-va-gl
+      rocm-opencl-icd 
+      rocm-opencl-runtime
+    ];
   };
 
   environment.sessionVariables = { LIBVA_DRIVER_NAME = "radeonsi"; };

@@ -10,15 +10,19 @@
 		nixvim = {
 			url = "github:nix-community/nixvim";
 		};
+		chaotic = {
+			url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+		};
 	};
 
-	outputs = { self, nixpkgs, fenix, nixvim, ... }@inputs: {
+	outputs = { self, nixpkgs, chaotic, fenix, nixvim, ... }@inputs: {
 		packages.x86_64-linux.default = fenix.packages.x86_64-linux.minimal.toolchain;
 		nixosConfigurations.quantum = nixpkgs.lib.nixosSystem {
 			system = "x86_64-linux";
 			modules = [
 				./modules/quantum/module.nix
 				nixvim.nixosModules.nixvim
+				chaotic.nixosModules.default
 				({ pkgs, ... }: {
 					nixpkgs.overlays = [ fenix.overlays.default ];
 					environment.systemPackages = with pkgs; [

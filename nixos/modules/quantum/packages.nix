@@ -5,6 +5,8 @@
 
 	services.udev.packages = [ pkgs.via ];
 
+	chaotic.mesa-git.enable = true;
+
 	users.users.bear.packages = with pkgs; [
 		godot_4
 		bear
@@ -73,6 +75,7 @@
 	];
 
 	environment.systemPackages = with pkgs; [
+		
 		libudev-zero
 		lld_18
 		vulkan-tools
