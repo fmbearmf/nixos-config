@@ -9,6 +9,7 @@
 		};
 		nixvim = {
 			url = "github:nix-community/nixvim";
+			inputs.nixpkgs.follows = "nixpkgs";
 		};
 		chaotic = {
 			url = "github:chaotic-cx/nyx/nyxpkgs-unstable";

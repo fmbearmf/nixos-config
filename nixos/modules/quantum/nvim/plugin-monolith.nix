@@ -15,6 +15,9 @@
 	clangd = {
 	  enable = true;
 	};
+	nixd = {
+	  enable = true;
+	};
       };
     };
     cmp = {
