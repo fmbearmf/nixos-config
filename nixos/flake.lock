@@ -112,11 +112,11 @@
         "rust-analyzer-src": "rust-analyzer-src_2"
       },
       "locked": {
-        "lastModified": 1720247208,
-        "narHash": "sha256-isVgeEPkkRz2Tw3vx0J+HyIvKmwpyY4SNcw7MbKZa/I=",
+        "lastModified": 1720333712,
+        "narHash": "sha256-qZmpIPUe4mwdBGmKPBJ5KzvXH6GOCXheiusTAgNjAAA=",
         "owner": "nix-community",
         "repo": "fenix",
-        "rev": "27cbad7cc093c5298231b87daa04db9610053651",
+        "rev": "b78c98c53a46e2a2d6479a920f98aa0aeae56281",
         "type": "github"
       },
       "original": {
@@ -137,22 +137,6 @@
       "original": {
         "type": "tarball",
         "url": "https://flakehub.com/f/edolstra/flake-compat/1.tar.gz"
-      }
-    },
-    "flake-compat_2": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1696426674,
-        "narHash": "sha256-kvjfFW7WAETZlt09AgDn1MrtKzP7t90Vf7vypd3OL1U=",
-        "owner": "edolstra",
-        "repo": "flake-compat",
-        "rev": "0f9255e01c2351cc7d116c072cb317785dd33b33",
-        "type": "github"
-      },
-      "original": {
-        "owner": "edolstra",
-        "repo": "flake-compat",
-        "type": "github"
       }
     },
     "flake-parts": {
@@ -226,7 +210,10 @@
     },
     "git-hooks": {
       "inputs": {
-        "flake-compat": "flake-compat_2",
+        "flake-compat": [
+          "nixvim",
+          "flake-compat"
+        ],
         "gitignore": "gitignore",
         "nixpkgs": [
           "nixvim",
@@ -443,11 +430,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1720298683,
-        "narHash": "sha256-CNtfHBwlKuTTanwmUI85Z/HkHShnqZs+WYyxQR8zRFY=",
+        "lastModified": 1720382751,
+        "narHash": "sha256-i+wpxx7NMEIoxAl0IQ3bNDX4faTcO13ZJ6j75SJUIzA=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "6674dea8403747827431d4d8497c34023f93d047",
+        "rev": "41794c222a5eaa966e5513c707c0b3f5e7abf5e0",
         "type": "github"
       },
       "original": {
@@ -485,11 +472,11 @@
     "rust-analyzer-src_2": {
       "flake": false,
       "locked": {
-        "lastModified": 1720175310,
-        "narHash": "sha256-PQG46r17hX06Q1akkuVSeMD1hfiNBENWVlgGn1SF/SE=",
+        "lastModified": 1720292183,
+        "narHash": "sha256-CPcdVpsgmNXYVsw4nKPrM23J5mYXtiotYMz2BjPDIKU=",
         "owner": "rust-lang",
         "repo": "rust-analyzer",
-        "rev": "f2afcb874e7410121c366ae601660abe327e320b",
+        "rev": "058c88da66797eb588b47a4aac3e42847d1333d7",
         "type": "github"
       },
       "original": {
