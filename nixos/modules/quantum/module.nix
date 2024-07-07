@@ -1,24 +1,26 @@
-{ config, lib, pkgs, ... }:
-
 {
-  imports =
-    [
-      ./hardware.nix
-      ./audacity.nix
-      ./sudo.nix
-      ./zram.nix
-      ./wm.nix
-      ./dns.nix
-      ./lutris.nix
-      ./virt.nix
-      ./desktop.nix
-      ./packages.nix
-      ./docker.nix
-      ./flatpak.nix
-      ./nvim/default.nix
-    ];
-    nix.settings = {
-	experimental-features = ["nix-command" "flakes"];
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  imports = [
+    ./hardware.nix
+    ./audacity.nix
+    ./sudo.nix
+    ./zram.nix
+    ./wm.nix
+    ./dns.nix
+    ./lutris.nix
+    ./virt.nix
+    ./desktop.nix
+    ./packages.nix
+    ./docker.nix
+    ./flatpak.nix
+    ./nvim/default.nix
+  ];
+  nix.settings = {
+    experimental-features = ["nix-command" "flakes"];
   };
 
   boot.loader.systemd-boot.enable = true;
@@ -32,10 +34,10 @@
 
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
-  	packages = [ pkgs.terminus_font ];
-    	font = "ter-v32n";
-    	useXkbConfig = true;
-   };
+    packages = [pkgs.terminus_font];
+    font = "ter-v32n";
+    useXkbConfig = true;
+  };
 
   hardware.graphics.enable = true;
   #hardware.opengl.driSupport = true;
@@ -45,18 +47,18 @@
     extraPackages = with pkgs; [
       vaapiVdpau
       libvdpau-va-gl
-      rocm-opencl-icd 
+      rocm-opencl-icd
       rocm-opencl-runtime
     ];
   };
 
-  environment.sessionVariables = { LIBVA_DRIVER_NAME = "radeonsi"; };
+  environment.sessionVariables = {LIBVA_DRIVER_NAME = "radeonsi";};
 
   systemd.tmpfiles.rules = [
-		"L+		/opt/rocm/hip	-	-	-	-	${pkgs.rocmPackages.clr}"
+    "L+		/opt/rocm/hip	-	-	-	-	${pkgs.rocmPackages.clr}"
   ];
 
-  services.xserver.videoDrivers = [ "amdgpu" ];
+  services.xserver.videoDrivers = ["amdgpu"];
 
   services.printing.enable = true;
 
@@ -64,55 +66,55 @@
   hardware.pulseaudio.enable = false;
 
   services = {
-	pipewire = {
-		enable = true;
-		audio.enable = true;
-		pulse.enable = true;
-		alsa.enable = true;
-		alsa.support32Bit = true;
-		jack.enable = true;
-		wireplumber.enable = true;
-	};
+    pipewire = {
+      enable = true;
+      audio.enable = true;
+      pulse.enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      jack.enable = true;
+      wireplumber.enable = true;
+    };
   };
 
   programs.fish.enable = true;
   users.defaultUserShell = pkgs.fish;
 
   programs.fish.promptInit = ''
-  	${pkgs.any-nix-shell}/bin/any-nix-shell fish --info-right | source
+    ${pkgs.any-nix-shell}/bin/any-nix-shell fish --info-right | source
   '';
 
   users.users.bear = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "render" ];
+    extraGroups = ["wheel" "render"];
     packages = with pkgs; [
       tree
     ];
     shell = pkgs.fish;
   };
-  users.extraGroups.vboxusers.members = [ "bear" ];
+  users.extraGroups.vboxusers.members = ["bear"];
 
   environment.systemPackages = with pkgs; [
     wget
-	btrfs-progs		
-	moreutils
-	binutils
-	file
-	psmisc
-	netcat
-	curl
-	wget
-	pciutils
-	iputils
-	powertop
-	patchutils
-	nix-index
-	direnv
-	git
-	jq
-	ripgrep
-	fd
-	mesa
+    btrfs-progs
+    moreutils
+    binutils
+    file
+    psmisc
+    netcat
+    curl
+    wget
+    pciutils
+    iputils
+    powertop
+    patchutils
+    nix-index
+    direnv
+    git
+    jq
+    ripgrep
+    fd
+    mesa
   ];
 
   programs.mtr.enable = true;

@@ -1,5 +1,10 @@
-{ config, lib, pkgs, ... }: {
-  environment.variables = let 
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  environment.variables = let
     makePluginPath = format:
       (lib.makeSearchPath format [
         "$HOME/.nix-profile/lib"
@@ -9,11 +14,11 @@
       ])
       + ":$HOME/.${format}";
   in {
-    DSSI_PATH   = makePluginPath "dssi";
+    DSSI_PATH = makePluginPath "dssi";
     LADSPA_PATH = makePluginPath "ladspa";
-    LV2_PATH    = makePluginPath "lv2";
-    LXVST_PATH  = makePluginPath "lxvst";
-    VST_PATH    = makePluginPath "vst";
-    VST3_PATH   = makePluginPath "vst3";
+    LV2_PATH = makePluginPath "lv2";
+    LXVST_PATH = makePluginPath "lxvst";
+    VST_PATH = makePluginPath "vst";
+    VST3_PATH = makePluginPath "vst3";
   };
 }

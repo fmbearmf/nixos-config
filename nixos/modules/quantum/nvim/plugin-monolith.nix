@@ -12,12 +12,12 @@
           installCargo = false;
           installRustc = false;
         };
-	clangd = {
-	  enable = true;
-	};
-	nixd = {
-	  enable = true;
-	};
+        clangd = {
+          enable = true;
+        };
+        nixd = {
+          enable = true;
+        };
       };
     };
     cmp = {

@@ -1,7 +1,10 @@
-{ config, pkgs, lib, ... }:
-
 {
-		security.sudo.extraConfig = ''
-				Defaults insults
-		'';
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
+  security.sudo.extraConfig = ''
+    Defaults insults
+  '';
 }
