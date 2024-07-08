@@ -10,18 +10,6 @@ in {
     enable = true;
   };
 
-  #environment.systemPackages = with pkgs; [
-  #	wayfire-with-plugins
-  #	dunst
-  #	libsForQt5.breeze-qt5
-  #	libsForQt5.breeze-gtk
-  #	waybar
-  #	pavucontrol
-  #	nwg-launchers
-  #	grim
-  #	slurp
-  #];
-
   #services.greetd = {
   #	enable = true;
   #	settings = {
@@ -38,10 +26,33 @@ in {
   #	user = "bear";
   #};
 
-  services.displayManager.sddm = {
-    enable = true;
-    wayland = {
+  nixpkgs.overlays = [
+    (self: super: {
+      gamescope = super.gamescope.overrideAttrs (_: rec {
+        postInstall = let
+          gamescopeSession = ''
+            [Desktop Entry]
+            Name=steam-gamescope
+            Comment=yeah
+            Exec=/home/bear/.config/fish/steam.sh
+            Type=Application
+          '';
+        in ''
+          mkdir -p $out/share/wayland-sessions
+          echo "${gamescopeSession}" > $out/share/wayland-sessions/gamescope.desktop
+        '';
+        passthru.providedSessions = ["gamescope"];
+      });
+    })
+  ];
+
+  services.displayManager = {
+    sessionPackages = [
+      pkgs.gamescope
+    ];
+    sddm = {
       enable = true;
+      wayland.enable = true;
     };
   };
 
