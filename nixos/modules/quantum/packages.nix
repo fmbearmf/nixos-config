@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  pkgs-stable,
   ...
 }: {
   nixpkgs.config.allowUnfree = true;
@@ -79,6 +80,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    (pkgs-stable.gamescope)
     maliit-keyboard
     libudev-zero
     lld_18
