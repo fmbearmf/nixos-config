@@ -34,8 +34,7 @@ in {
             [Desktop Entry]
             Name=steam-gamescope
             Comment=yeah
-            Exec=/home/bear/.config/fish/steam.sh
-            Type=Application
+            Exec=STEAM_MULTIPLE_XWAYLANDS=1 gamescope -W 2560 -H 1440 -r 165 -e --xwayland-count 2 --adaptive-sync --display-index DP-2 -- steam -gamepadui -steamdeck -steamos3
           '';
         in ''
           mkdir -p $out/share/wayland-sessions
